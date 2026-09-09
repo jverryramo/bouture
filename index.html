@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planter ma bouture de saule | Ramo</title>
+<meta name="description" content="Vous avez reçu une bouture de saule Ramo ? Répondez à trois questions et découvrez comment la planter, étape par étape.">
+<meta name="robots" content="noindex, follow">
+<meta property="og:title" content="Planter ma bouture de saule | Ramo">
+<meta property="og:description" content="Le guide de plantation de votre bouture de saule Ramo, en six étapes.">
+<meta name="theme-color" content="#003c38">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23003c38'/%3E%3Cpath d='M16 26V12M16 12c-4 0-7-3-7-7 4 0 7 3 7 7zM16 17c4 0 7-3 7-7-4 0-7 3-7 7z' fill='none' stroke='%23dcf21e' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  /* ====== CONFIGURATION : voir aussi la constante SHEET_URL dans le script en bas de page ====== */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#003c38;--card:rgba(255,255,255,.05);--accent:#dcf21e;--text:#e8e4df;--muted:#b8c4ba;--white:#fff;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  }
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+  a{color:inherit}
+  .container{max-width:860px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  header{padding:22px 0;border-bottom:1px solid rgba(220,242,30,.1)}
+  .logo{display:inline-flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-weight:700;font-size:22px;letter-spacing:-.02em}
+  .logo svg{width:30px;height:30px}
+
+  .hero{padding:clamp(40px,8vw,80px) 0 clamp(24px,4vw,40px);text-align:center;
+    background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(220,242,30,.06),transparent 70%)}
+  .eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);position:relative;padding-left:24px;margin-bottom:22px}
+  .eyebrow::before{content:'';position:absolute;left:0;top:50%;width:16px;height:1px;background:var(--accent)}
+  h1{font-size:clamp(34px,7vw,58px);font-weight:700;color:var(--white);line-height:1.05;letter-spacing:-.02em;margin-bottom:22px}
+  h1 em{color:var(--accent);font-style:italic}
+  .lead{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:620px;margin:0 auto}
+
+  .card{background:var(--card);border:1px solid rgba(220,242,30,.14);border-radius:20px;padding:clamp(22px,4vw,40px);margin:clamp(20px,4vw,40px) 0}
+  .card h2{font-size:clamp(22px,2.6vw,28px);color:var(--white);line-height:1.15;margin-bottom:10px}
+  .hint{font-size:14.5px;color:var(--muted);margin-bottom:24px}
+
+  form{display:flex;flex-direction:column;gap:18px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:640px){.row{grid-template-columns:1fr}}
+  label.lbl{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+  input[type=text],input[type=email]{width:100%;background:var(--card);border:1px solid rgba(220,242,30,.14);border-radius:12px;padding:16px 18px;color:var(--white);font:inherit;font-size:16px;outline:none;transition:border-color .2s,box-shadow .2s}
+  input::placeholder{color:var(--muted);opacity:.6}
+  input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(220,242,30,.12)}
+  input[aria-invalid=true]{border-color:rgba(255,130,130,.7)}
+  .err{color:#ffb3b3;font-size:13.5px;margin-top:8px}
+  .err--send{padding:12px 16px;border-radius:10px;background:rgba(198,40,40,.12);border:1px solid rgba(255,130,130,.35)}
+  [hidden]{display:none!important}
+
+  fieldset{border:1px solid rgba(220,242,30,.14);background:var(--card);border-radius:12px;padding:18px 18px 16px;min-width:0}
+  legend{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;width:100%;padding:0}
+  legend .t{font-size:13px;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:.08em}
+  legend .h{font-size:12px;color:var(--muted);opacity:.75}
+  legend .c{margin-left:auto;font-size:12px;font-weight:700;color:var(--muted)}
+  legend .c.full{color:var(--accent)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;margin-top:14px}
+  @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  .chk{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:var(--muted);cursor:pointer;padding:6px 0;line-height:1.35}
+  .chk input{appearance:none;-webkit-appearance:none;width:18px;height:18px;flex-shrink:0;margin-top:2px;border:1.5px solid rgba(220,242,30,.4);border-radius:4px;background:transparent;cursor:pointer;display:inline-grid;place-content:center;transition:all .2s}
+  .chk input:checked{background:var(--accent);border-color:var(--accent)}
+  .chk input:checked::after{content:'';width:10px;height:10px;background:var(--bg);clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0%,43% 62%)}
+  .chk input:disabled{opacity:.35;cursor:not-allowed}
+  .chk input:disabled+span{opacity:.45}
+  .chk:hover span{color:var(--white)}
+  .autre{margin-top:12px}
+  .autre input{padding:12px 16px;font-size:15px}
+
+  .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;opacity:0;pointer-events:none}
+  button.submit{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--accent);color:var(--bg);border:0;padding:18px 28px;border-radius:12px;font:inherit;font-size:16px;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
+  button.submit:hover{background:#e8ff40;transform:translateY(-1px)}
+  button.submit:disabled{opacity:.6;cursor:wait;transform:none}
+  .consent{font-size:12.5px;color:var(--muted);opacity:.75;line-height:1.5}
+  .consent a{text-decoration:underline;text-underline-offset:2px}
+
+  /* Guide : masqué tant que le formulaire n'est pas soumis (si JS actif) */
+  .js #guide:not(.on){display:none}
+  .js #questions.done{display:none}
+  #guide{padding-bottom:clamp(60px,8vw,100px)}
+  .ok{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:clamp(20px,4vw,40px) 0 36px;padding:18px 22px;border-radius:14px;background:rgba(220,242,30,.1);border:1px solid rgba(220,242,30,.35);color:var(--white);font-size:15.5px}
+  .ok strong{font-size:18px}
+  .ok .ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--bg);flex-shrink:0}
+  .back{margin:20px 0 0;padding:12px 16px;border-radius:10px;background:rgba(220,242,30,.1);border:1px solid rgba(220,242,30,.3);color:var(--white);font-size:14px}
+  .label{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);position:relative;padding-left:24px}
+  .label::before{content:'';position:absolute;left:0;top:50%;width:16px;height:1px;background:var(--accent)}
+  h2.big{font-size:clamp(28px,5vw,42px);color:var(--white);line-height:1.1;letter-spacing:-.015em;margin:12px 0 14px}
+  h2.big em{color:var(--accent);font-style:italic}
+  .intro{font-size:clamp(15px,1.3vw,17px);color:var(--muted);max-width:660px;margin-bottom:clamp(28px,4vw,44px)}
+
+  ol.steps{list-style:none;display:grid;gap:14px}
+  .step{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;background:var(--card);border:1px solid rgba(220,242,30,.12);border-radius:16px;padding:clamp(18px,3vw,26px)}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--accent);color:var(--bg);font-weight:700;font-size:21px}
+  .step h3{font-size:clamp(18px,2vw,21px);color:var(--white);line-height:1.2;margin:6px 0 10px}
+  .step p{font-size:15.5px;color:var(--muted)}
+  @media (max-width:540px){.step{grid-template-columns:38px 1fr;gap:12px}.num{width:38px;height:38px;font-size:17px}.step h3{margin-top:2px}}
+
+  .tips{margin-top:clamp(26px,4vw,36px);padding:clamp(18px,3vw,26px);border-radius:16px;border:1px dashed rgba(220,242,30,.35)}
+  .tips h3{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .tips ul{padding-left:20px;display:grid;gap:8px}
+  .tips li{font-size:15px;color:var(--muted)}
+
+  .more{margin-top:clamp(44px,6vw,64px)}
+  .more h2{font-size:clamp(24px,3vw,32px);color:var(--white);line-height:1.15;margin:12px 0 8px}
+  .more p{font-size:15.5px;color:var(--muted);margin-bottom:20px}
+  .more ul{list-style:none;display:grid;gap:10px}
+  .more a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;border-radius:14px;background:var(--card);border:1px solid rgba(220,242,30,.14);text-decoration:none;transition:border-color .2s,background .2s}
+  .more a:hover{border-color:var(--accent);background:rgba(220,242,30,.06)}
+  .more small{display:block;font-size:12.5px;color:var(--muted);opacity:.8;margin-bottom:4px}
+  .more strong{font-size:16px;color:var(--white)}
+  .more svg{flex-shrink:0;color:var(--accent)}
+
+  .cta{margin-top:clamp(44px,6vw,64px);padding:clamp(26px,4vw,40px);border-radius:20px;text-align:center;border:1px solid rgba(220,242,30,.14);
+    background:radial-gradient(ellipse 80% 80% at 50% 0%,rgba(220,242,30,.08),transparent 70%),rgba(255,255,255,.04)}
+  .cta h2{font-size:clamp(24px,3vw,32px);color:var(--white);line-height:1.15;margin-bottom:12px}
+  .cta p{font-size:15.5px;color:var(--muted);max-width:540px;margin:0 auto 24px}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}
+  .btn--p{background:var(--accent);color:var(--bg)}
+  .btn--p:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(220,242,30,.3)}
+  .btn--g{background:rgba(255,255,255,.08);color:var(--white);border:1px solid rgba(255,255,255,.22)}
+  .btn--g:hover{border-color:var(--accent);color:var(--accent)}
+  @media (max-width:540px){.btn{width:100%;justify-content:center}}
+
+  footer{padding:28px 0 40px;border-top:1px solid rgba(220,242,30,.1);font-size:13px;color:var(--muted);text-align:center}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  @media (prefers-reduced-motion:no-preference){#guide.on{animation:in .5s cubic-bezier(.16,1,.3,1)}@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a class="logo" href="https://ramo.eco" aria-label="Ramo">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#dcf21e"/><path d="M16 26V12M16 12c-4 0-7-3-7-7 4 0 7 3 7 7zM16 17c4 0 7-3 7-7-4 0-7 3-7 7z" fill="none" stroke="#003c38" stroke-width="2.2" stroke-linecap="round"/></svg>
+      ramo
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Merci de votre visite</span>
+      <h1>Votre bouture de saule,<br><em>prête à planter</em>.</h1>
+      <p class="lead">Cette tige dormante peut devenir un arbuste de 2 m en une seule saison. Dites-nous qui vous êtes et quels enjeux vous rencontrez, et le guide de plantation se déverrouille juste en dessous.</p>
+    </div>
+  </section>
+
+  <section id="questions">
+    <div class="container">
+      <div class="card">
+        <h2>Trois questions rapides avant de planter</h2>
+        <p class="hint">Environ 30 secondes. Vos réponses nous aident à comprendre quels enjeux environnementaux comptent pour vous.</p>
+
+        <form id="f" action="https://formspree.io/f/mqevoryo" method="POST" novalidate>
+          <div class="row">
+            <div>
+              <label class="lbl" for="nom">Nom complet</label>
+              <input type="text" id="nom" name="nom" placeholder="Prénom et nom" autocomplete="name" required>
+              <p class="err" data-err="nom" hidden>Veuillez indiquer votre nom.</p>
+            </div>
+            <div>
+              <label class="lbl" for="courriel">Courriel</label>
+              <input type="email" id="courriel" name="courriel" placeholder="vous@organisation.com" autocomplete="email" inputmode="email" required>
+              <p class="err" data-err="courriel" hidden>Veuillez indiquer un courriel valide.</p>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend><span class="t">Vos 3 principaux enjeux</span><span class="h">Choisissez jusqu’à 3</span><span class="c" id="cnt" aria-live="polite">0/3 sélectionné</span></legend>
+            <div class="grid">
+              <label class="chk"><input type="checkbox" name="enjeux" value="Eaux usées ou eaux impactées (lixiviat, eaux de procédé)" data-key="eaux-usees"><span>Eaux usées ou eaux impactées (lixiviat, eaux de procédé)</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Eaux de ruissellement et eaux pluviales" data-key="ruissellement"><span>Eaux de ruissellement et eaux pluviales</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Sols dégradés ou contaminés à restaurer" data-key="sols"><span>Sols dégradés ou contaminés à restaurer</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Végétalisation de sites (mines, enfouissement, friches)" data-key="vegetalisation"><span>Végétalisation de sites (mines, enfouissement, friches)</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Bruit (route, chantier, voisinage)" data-key="bruit"><span>Bruit (route, chantier, voisinage)</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Poussières, odeurs ou vents à intercepter" data-key="poussieres"><span>Poussières, odeurs ou vents à intercepter</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Boues industrielles ou municipales à valoriser" data-key="boues"><span>Boues industrielles ou municipales à valoriser</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Biodiversité, bandes riveraines, îlots de chaleur" data-key="biodiversite"><span>Biodiversité, bandes riveraines, îlots de chaleur</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Carboneutralité et réduction des GES" data-key="carbone"><span>Carboneutralité et réduction des GES</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Conformité réglementaire et coûts d’exploitation" data-key="conformite"><span>Conformité réglementaire et coûts d’exploitation</span></label>
+              <label class="chk"><input type="checkbox" name="enjeux" value="Autre (précisez)" data-key="autre"><span>Autre (précisez)</span></label>
+            </div>
+            <div class="autre" id="autre" hidden>
+              <label class="sr-only" for="autre-txt">Autre enjeu</label>
+              <input type="text" id="autre-txt" name="autre" placeholder="Décrivez votre enjeu en quelques mots" maxlength="200">
+            </div>
+            <p class="err" data-err="enjeux" hidden>Veuillez sélectionner au moins un enjeu (maximum 3).</p>
+          </fieldset>
+
+          <input type="hidden" name="langue" value="fr">
+          <input type="hidden" name="source" value="flyer-bouture">
+          <input type="hidden" name="_subject" value="Flyer bouture – nouvelle réponse">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <p class="err err--send" data-err="send" hidden>Une erreur est survenue lors de l’envoi. Réessayez, ou écrivez-nous à info@ramo.eco.</p>
+
+          <button type="submit" class="submit" id="btn">Voir le guide de plantation
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="consent">En soumettant, vous acceptez que Ramo vous contacte au sujet de ces enjeux. Nous ne partageons jamais vos informations. <a href="https://ramo.eco/politique-confidentialite/" target="_blank" rel="noopener">Politique de confidentialité</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" aria-hidden="true">
+    <div class="container">
+      <p class="back" id="back" hidden>Vous avez déjà répondu. Votre guide est ci-dessous.</p>
+      <div class="ok" id="ok" hidden>
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <strong>Merci !</strong> <span>Voici comment planter votre bouture.</span>
+      </div>
+
+      <span class="label">Guide de plantation</span>
+      <h2 class="big">Comment planter votre <em>bouture de saule</em></h2>
+      <p class="intro">Le saule est l’une des plantes les plus faciles à multiplier : une tige dormante enfoncée dans un sol humide s’enracine toute seule, sans hormone ni engrais. Suivez ces six étapes.</p>
+
+      <ol class="steps">
+        <li class="step"><span class="num" aria-hidden="true">1</span><div><h3>Gardez-la vivante jusqu’au jour J</h3><p>Votre bouture est dormante : brune, sans feuilles, et c’est normal. En attendant de la planter, gardez-la au frais et à l’humidité : enroulée dans un papier essuie-tout humide, dans un sac de plastique au réfrigérateur (jamais au congélateur). Elle se conserve ainsi plusieurs semaines. Vous ne pouvez pas planter avant un moment ? Placez-la dans un verre avec 2–3 cm d’eau près d’une fenêtre et changez l’eau tous les 2–3 jours : les racines apparaissent en 1 à 3 semaines.</p></div></li>
+        <li class="step"><span class="num" aria-hidden="true">2</span><div><h3>Choisissez le bon endroit</h3><p>Plein soleil (au moins 6 heures par jour) et un sol qui reste humide. Les racines du saule cherchent l’eau : gardez au moins 10 m de distance avec les fondations, les drains, le champ d’épuration et les conduites souterraines, et évitez les fils électriques au-dessus. Un saule arbustif atteint 3 à 6 m s’il n’est pas taillé.</p></div></li>
+        <li class="step"><span class="num" aria-hidden="true">3</span><div><h3>Choisissez le bon moment</h3><p>Les meilleures fenêtres sont le printemps, dès que le sol est dégelé et se travaille (avril–mai), et l’automne avant les premiers gels durs (septembre–octobre). En plein été, plantez-la en pot à la mi-ombre, arrosez chaque jour et transplantez à l’automne.</p></div></li>
+        <li class="step"><span class="num" aria-hidden="true">4</span><div><h3>Préparez le sol</h3><p>Dégagez un cercle d’environ 50 cm de diamètre de tout gazon et mauvaises herbes, puis ameublissez le sol sur 25 à 30 cm de profondeur. Aucun engrais ni compost nécessaire : le saule préfère un sol simple et humide.</p></div></li>
+        <li class="step"><span class="num" aria-hidden="true">5</span><div><h3>Plantez la bouture</h3><p>Les bourgeons pointent vers le haut, vers l’extrémité de la tige. Enfoncez la bouture à la verticale sur environ les deux tiers de sa longueur, en laissant 2 ou 3 bourgeons (5 à 8 cm) hors du sol. Si le sol est dur, ouvrez d’abord un trou avec une tige de métal. Tassez fermement autour de la tige : aucune poche d’air.</p></div></li>
+        <li class="step"><span class="num" aria-hidden="true">6</span><div><h3>Arrosez, paillez et regardez pousser</h3><p>Arrosez abondamment tout de suite, puis 1 à 2 fois par semaine pendant les 8 premières semaines en l’absence de pluie. Étendez 5 à 8 cm de paillis (le bois raméal fragmenté est idéal) sans toucher la tige. Les premières feuilles sortent en 2 à 4 semaines ; comptez 1 à 2 m de croissance la première année. Protégez des chevreuils et des lièvres si nécessaire. À la fin de l’hiver suivant, recépez à 10 cm pour un arbuste touffu, ou laissez pousser pour obtenir un petit arbre.</p></div></li>
+      </ol>
+
+      <aside class="tips">
+        <h3>Bon à savoir</h3>
+        <ul>
+          <li>Vous plantez une haie ou un brise-vent ? Espacez les boutures de 30 à 50 cm sur la ligne.</li>
+          <li>Une bouture se plante aussi directement dans un grand pot (au moins 30 cm) sur un balcon ; gardez le sol humide en permanence.</li>
+          <li>Le saule tolère les sols gorgés d’eau, compactés et salés : c’est la plante que nous utilisons pour traiter les eaux usées et restaurer les sites dégradés.</li>
+        </ul>
+      </aside>
+
+      <div class="more" id="more" hidden>
+        <span class="label">Vos enjeux</span>
+        <h2>Vous avez mentionné…</h2>
+        <p>Voici comment les saules Ramo répondent aux enjeux que vous avez sélectionnés.</p>
+        <ul id="more-list"></ul>
+      </div>
+
+      <div class="cta">
+        <h2>Envie d’aller plus loin ?</h2>
+        <p>Besoin de plus de boutures pour une haie ou un petit projet ? Notre partenaire Saules Québec en vend à l’unité. Pour un projet à l’échelle d’une organisation, parlez à notre équipe.</p>
+        <div class="btns">
+          <a class="btn btn--p" href="https://saulesquebec.com" target="_blank" rel="noopener">Acheter des boutures
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          <a class="btn btn--g" href="https://ramo.eco/nous-joindre/">Parler à Ramo
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© Ramo · <a href="https://ramo.eco">ramo.eco</a> · <a href="mailto:info@ramo.eco">info@ramo.eco</a> · <a href="tel:+14505880013">450 588-0013</a></div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ================= CONFIGURATION =================
+   * SHEET_URL : URL « /exec » du déploiement Google Apps Script qui écrit
+   * dans la feuille Google Sheets (voir README.md). Tant que la valeur est
+   * vide, les réponses partent vers Formspree (FORMSPREE_URL) pour ne rien
+   * perdre. */
+  var SHEET_URL = '';
+  var FORMSPREE_URL = 'https://formspree.io/f/mqevoryo';
+  /* ================================================= */
+
+  var MAX = 3;
+  var KEY = 'ramo-bouture-unlocked';
+  var SOL = {
+    'eaux-usees':    { href: 'https://ramo.eco/evaplant/', t: 'Evaplant® : traiter les eaux par évapotranspiration' },
+    'ruissellement': { href: 'https://ramo.eco/evacap-ruissellement-eaux-usees/', t: 'Evacap™ : gérer le ruissellement à la source' },
+    'sols':          { href: 'https://ramo.eco/vegetalisation-site-degrades-saules/', t: 'Végétalisation de sites dégradés' },
+    'vegetalisation':{ href: 'https://ramo.eco/vegetalisation-site-degrades-saules/', t: 'Végétalisation de sites dégradés' },
+    'bruit':         { href: 'https://ramo.eco/murs-antibruit/', t: 'Murs antibruit HF1 et Pilebyg®' },
+    'poussieres':    { href: 'https://ramo.eco/barriere-vegetale/', t: 'Barrière végétale Intercept™' },
+    'boues':         { href: 'https://ramo.eco/boues-industrielles/', t: 'Valorisation des boues par les saules' },
+    'biodiversite':  { href: 'https://ramo.eco/saules-environnement/', t: 'Les saules au service de l’environnement' },
+    'carbone':       { href: 'https://ramo.eco/saule-superpouvoirs/', t: 'Les superpouvoirs du saule' },
+    'conformite':    { href: 'https://ramo.eco/nous-joindre/', t: 'Parler à un expert Ramo' },
+    'autre':         { href: 'https://ramo.eco/nous-joindre/', t: 'Parler à un expert Ramo' }
+  };
+
+  var form = document.getElementById('f');
+  var gate = document.getElementById('questions');
+  var guide = document.getElementById('guide');
+  var btn = document.getElementById('btn');
+  var cnt = document.getElementById('cnt');
+  var autre = document.getElementById('autre');
+  var autreTxt = document.getElementById('autre-txt');
+  var boxes = Array.prototype.slice.call(form.querySelectorAll('input[name="enjeux"]'));
+
+  function checked() { return boxes.filter(function (b) { return b.checked; }); }
+  function refresh() {
+    var n = checked().length;
+    boxes.forEach(function (b) { b.disabled = !b.checked && n >= MAX; });
+    cnt.textContent = n + '/' + MAX + ' sélectionné' + (n > 1 ? 's' : '');
+    cnt.classList.toggle('full', n >= MAX);
+    var a = boxes.filter(function (b) { return b.dataset.key === 'autre'; })[0];
+    var show = !!(a && a.checked);
+    autre.hidden = !show;
+    if (!show) autreTxt.value = '';
+    if (n) err('enjeux', false);
+  }
+  boxes.forEach(function (b) { b.addEventListener('change', refresh); });
+  refresh();
+
+  function err(name, on) {
+    var el = form.querySelector('[data-err="' + name + '"]');
+    if (el) el.hidden = !on;
+    var input = form.querySelector('input[name="' + name + '"]');
+    if (input && input.type !== 'checkbox') {
+      if (on) input.setAttribute('aria-invalid', 'true'); else input.removeAttribute('aria-invalid');
+    }
+  }
+  function validate() {
+    var nom = form.nom, mail = form.courriel;
+    var okNom = nom.value.trim().length >= 2;
+    var okMail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim());
+    var okEnj = checked().length >= 1;
+    err('nom', !okNom); err('courriel', !okMail); err('enjeux', !okEnj);
+    if (!okNom) nom.focus(); else if (!okMail) mail.focus(); else if (!okEnj) boxes[0].focus();
+    return okNom && okMail && okEnj;
+  }
+  ['nom', 'courriel'].forEach(function (n) { form[n].addEventListener('input', function () { err(n, false); }); });
+
+  function params() {
+    var p = new URLSearchParams();
+    new FormData(form).forEach(function (v, k) { if (k !== '_gotcha') p.append(k, String(v)); });
+    p.append('page', location.href);
+    p.append('horodatage_client', new Date().toISOString());
+    return p;
+  }
+  function toSheet() {
+    return fetch(SHEET_URL, { method: 'POST', body: params(), redirect: 'follow' }).then(function (r) {
+      if (r.type === 'opaque' || r.type === 'opaqueredirect') return true;
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.text().then(function (t) {
+        try { var j = JSON.parse(t); if (j && j.ok === false) throw new Error(j.error || 'apps-script'); } catch (e) { if (!/JSON/.test(String(e))) throw e; }
+        return true;
+      });
+    });
+  }
+  function toFormspree() {
+    return fetch(FORMSPREE_URL, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return true; });
+  }
+  function send() {
+    if (!/^https:\/\//.test(SHEET_URL)) {
+      console.warn('[bouture] SHEET_URL non configurée : envoi vers Formspree.');
+      return toFormspree();
+    }
+    return toSheet().catch(function (e) { console.error('[bouture] Google Sheets échoué, repli Formspree :', e); return toFormspree(); });
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function personalize(keys) {
+    var list = document.getElementById('more-list'), wrap = document.getElementById('more'), seen = {}, html = '';
+    (keys || []).forEach(function (k) {
+      var s = SOL[k]; if (!s || seen[s.href]) return; seen[s.href] = true;
+      var box = boxes.filter(function (b) { return b.dataset.key === k; })[0];
+      var label = box ? box.nextElementSibling.textContent : '';
+      html += '<li><a href="' + s.href + '"><span><small>' + esc(label) + '</small><strong>' + esc(s.t) + '</strong></span>' +
+        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>';
+    });
+    if (html) { list.innerHTML = html; wrap.hidden = false; }
+  }
+  function unlock(keys, fresh) {
+    gate.classList.add('done');
+    guide.classList.add('on');
+    guide.setAttribute('aria-hidden', 'false');
+    document.getElementById('ok').hidden = !fresh;
+    document.getElementById('back').hidden = fresh;
+    personalize(keys);
+    if (fresh) { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    err('send', false);
+    if (!validate()) return;
+    if (form._gotcha.value) return;
+    var keys = checked().map(function (b) { return b.dataset.key; });
+    var label = btn.innerHTML;
+    btn.disabled = true; btn.textContent = 'Envoi…';
+    send().then(function () {
+      try { localStorage.setItem(KEY, JSON.stringify({ at: Date.now(), keys: keys })); } catch (e) {}
+      unlock(keys, true);
+    }).catch(function (e) {
+      console.error('[bouture] envoi impossible :', e);
+      err('send', true);
+    }).then(function () { btn.disabled = false; btn.innerHTML = label; });
+  });
+
+  try {
+    var prev = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (prev && prev.keys) unlock(prev.keys, false);
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
