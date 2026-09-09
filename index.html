@@ -54,20 +54,10 @@
   fieldset{border:1px solid rgba(220,242,30,.14);background:var(--card);border-radius:12px;padding:18px 18px 16px;min-width:0}
   legend{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;width:100%;padding:0}
   legend .t{font-size:13px;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:.08em}
-  legend .h{font-size:12px;color:var(--muted);opacity:.75}
-  legend .c{margin-left:auto;font-size:12px;font-weight:700;color:var(--muted)}
-  legend .c.full{color:var(--accent)}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;margin-top:14px}
-  @media (max-width:640px){.grid{grid-template-columns:1fr}}
-  .chk{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:var(--muted);cursor:pointer;padding:6px 0;line-height:1.35}
-  .chk input{appearance:none;-webkit-appearance:none;width:18px;height:18px;flex-shrink:0;margin-top:2px;border:1.5px solid rgba(220,242,30,.4);border-radius:4px;background:transparent;cursor:pointer;display:inline-grid;place-content:center;transition:all .2s}
-  .chk input:checked{background:var(--accent);border-color:var(--accent)}
-  .chk input:checked::after{content:'';width:10px;height:10px;background:var(--bg);clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0%,43% 62%)}
-  .chk input:disabled{opacity:.35;cursor:not-allowed}
-  .chk input:disabled+span{opacity:.45}
-  .chk:hover span{color:var(--white)}
-  .autre{margin-top:12px}
-  .autre input{padding:12px 16px;font-size:15px}
+  fieldset .q{font-size:14.5px;color:var(--muted);margin:10px 0 16px;line-height:1.5}
+  .enjeux{display:grid;gap:14px}
+  .enjeux input{background:rgba(255,255,255,.06)}
+  .opt{font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted);opacity:.75}
 
   .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;opacity:0;pointer-events:none}
   button.submit{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--accent);color:var(--bg);border:0;padding:18px 28px;border-radius:12px;font:inherit;font-size:16px;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
@@ -102,15 +92,6 @@
   .tips ul{padding-left:20px;display:grid;gap:8px}
   .tips li{font-size:15px;color:var(--muted)}
 
-  .more{margin-top:clamp(44px,6vw,64px)}
-  .more h2{font-size:clamp(24px,3vw,32px);color:var(--white);line-height:1.15;margin:12px 0 8px}
-  .more p{font-size:15.5px;color:var(--muted);margin-bottom:20px}
-  .more ul{list-style:none;display:grid;gap:10px}
-  .more a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;border-radius:14px;background:var(--card);border:1px solid rgba(220,242,30,.14);text-decoration:none;transition:border-color .2s,background .2s}
-  .more a:hover{border-color:var(--accent);background:rgba(220,242,30,.06)}
-  .more small{display:block;font-size:12.5px;color:var(--muted);opacity:.8;margin-bottom:4px}
-  .more strong{font-size:16px;color:var(--white)}
-  .more svg{flex-shrink:0;color:var(--accent)}
 
   .cta{margin-top:clamp(44px,6vw,64px);padding:clamp(26px,4vw,40px);border-radius:20px;text-align:center;border:1px solid rgba(220,242,30,.14);
     background:radial-gradient(ellipse 80% 80% at 50% 0%,rgba(220,242,30,.08),transparent 70%),rgba(255,255,255,.04)}
@@ -172,25 +153,14 @@
           </div>
 
           <fieldset>
-            <legend><span class="t">Vos 3 principaux enjeux</span><span class="h">Choisissez jusqu’à 3</span><span class="c" id="cnt" aria-live="polite">0/3 sélectionné</span></legend>
-            <div class="grid">
-              <label class="chk"><input type="checkbox" name="enjeux" value="Eaux usées ou eaux impactées (lixiviat, eaux de procédé)" data-key="eaux-usees"><span>Eaux usées ou eaux impactées (lixiviat, eaux de procédé)</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Eaux de ruissellement et eaux pluviales" data-key="ruissellement"><span>Eaux de ruissellement et eaux pluviales</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Sols dégradés ou contaminés à restaurer" data-key="sols"><span>Sols dégradés ou contaminés à restaurer</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Végétalisation de sites (mines, enfouissement, friches)" data-key="vegetalisation"><span>Végétalisation de sites (mines, enfouissement, friches)</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Bruit (route, chantier, voisinage)" data-key="bruit"><span>Bruit (route, chantier, voisinage)</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Poussières, odeurs ou vents à intercepter" data-key="poussieres"><span>Poussières, odeurs ou vents à intercepter</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Boues industrielles ou municipales à valoriser" data-key="boues"><span>Boues industrielles ou municipales à valoriser</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Biodiversité, bandes riveraines, îlots de chaleur" data-key="biodiversite"><span>Biodiversité, bandes riveraines, îlots de chaleur</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Carboneutralité et réduction des GES" data-key="carbone"><span>Carboneutralité et réduction des GES</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Conformité réglementaire et coûts d’exploitation" data-key="conformite"><span>Conformité réglementaire et coûts d’exploitation</span></label>
-              <label class="chk"><input type="checkbox" name="enjeux" value="Autre (précisez)" data-key="autre"><span>Autre (précisez)</span></label>
+            <legend><span class="t">Vos 3 principaux enjeux</span></legend>
+            <p class="q">Quels enjeux rencontrez-vous dans votre municipalité ou dans la gestion des matières résiduelles ? Écrivez-les en quelques mots.</p>
+            <div class="enjeux">
+              <div><label class="lbl" for="enjeu1">Enjeu 1</label><input type="text" id="enjeu1" name="enjeux" placeholder="Ex. : lixiviat du lieu d’enfouissement" maxlength="300" required></div>
+              <div><label class="lbl" for="enjeu2">Enjeu 2 <span class="opt">(facultatif)</span></label><input type="text" id="enjeu2" name="enjeux" placeholder="Ex. : odeurs près du centre de tri" maxlength="300"></div>
+              <div><label class="lbl" for="enjeu3">Enjeu 3 <span class="opt">(facultatif)</span></label><input type="text" id="enjeu3" name="enjeux" placeholder="Ex. : valorisation des boues municipales" maxlength="300"></div>
             </div>
-            <div class="autre" id="autre" hidden>
-              <label class="sr-only" for="autre-txt">Autre enjeu</label>
-              <input type="text" id="autre-txt" name="autre" placeholder="Décrivez votre enjeu en quelques mots" maxlength="200">
-            </div>
-            <p class="err" data-err="enjeux" hidden>Veuillez sélectionner au moins un enjeu (maximum 3).</p>
+            <p class="err" data-err="enjeux" hidden>Veuillez décrire au moins un enjeu.</p>
           </fieldset>
 
           <input type="hidden" name="langue" value="fr">
@@ -239,13 +209,6 @@
         </ul>
       </aside>
 
-      <div class="more" id="more" hidden>
-        <span class="label">Vos enjeux</span>
-        <h2>Vous avez mentionné…</h2>
-        <p>Voici comment les saules Ramo répondent aux enjeux que vous avez sélectionnés.</p>
-        <ul id="more-list"></ul>
-      </div>
-
       <div class="cta">
         <h2>Envie d’aller plus loin ?</h2>
         <p>Besoin de plus de boutures pour une haie ou un petit projet ? Notre partenaire Saules Québec en vend à l’unité. Pour un projet à l’échelle d’une organisation, parlez à notre équipe.</p>
@@ -277,51 +240,22 @@
   var FORMSPREE_URL = 'https://formspree.io/f/mqevoryo';
   /* ================================================= */
 
-  var MAX = 3;
   var KEY = 'ramo-bouture-unlocked';
-  var SOL = {
-    'eaux-usees':    { href: 'https://ramo.eco/evaplant/', t: 'Evaplant® : traiter les eaux par évapotranspiration' },
-    'ruissellement': { href: 'https://ramo.eco/evacap-ruissellement-eaux-usees/', t: 'Evacap™ : gérer le ruissellement à la source' },
-    'sols':          { href: 'https://ramo.eco/vegetalisation-site-degrades-saules/', t: 'Végétalisation de sites dégradés' },
-    'vegetalisation':{ href: 'https://ramo.eco/vegetalisation-site-degrades-saules/', t: 'Végétalisation de sites dégradés' },
-    'bruit':         { href: 'https://ramo.eco/murs-antibruit/', t: 'Murs antibruit HF1 et Pilebyg®' },
-    'poussieres':    { href: 'https://ramo.eco/barriere-vegetale/', t: 'Barrière végétale Intercept™' },
-    'boues':         { href: 'https://ramo.eco/boues-industrielles/', t: 'Valorisation des boues par les saules' },
-    'biodiversite':  { href: 'https://ramo.eco/saules-environnement/', t: 'Les saules au service de l’environnement' },
-    'carbone':       { href: 'https://ramo.eco/saule-superpouvoirs/', t: 'Les superpouvoirs du saule' },
-    'conformite':    { href: 'https://ramo.eco/nous-joindre/', t: 'Parler à un expert Ramo' },
-    'autre':         { href: 'https://ramo.eco/nous-joindre/', t: 'Parler à un expert Ramo' }
-  };
 
   var form = document.getElementById('f');
   var gate = document.getElementById('questions');
   var guide = document.getElementById('guide');
   var btn = document.getElementById('btn');
-  var cnt = document.getElementById('cnt');
-  var autre = document.getElementById('autre');
-  var autreTxt = document.getElementById('autre-txt');
-  var boxes = Array.prototype.slice.call(form.querySelectorAll('input[name="enjeux"]'));
+  var enjeux = Array.prototype.slice.call(form.querySelectorAll('input[name="enjeux"]'));
 
-  function checked() { return boxes.filter(function (b) { return b.checked; }); }
-  function refresh() {
-    var n = checked().length;
-    boxes.forEach(function (b) { b.disabled = !b.checked && n >= MAX; });
-    cnt.textContent = n + '/' + MAX + ' sélectionné' + (n > 1 ? 's' : '');
-    cnt.classList.toggle('full', n >= MAX);
-    var a = boxes.filter(function (b) { return b.dataset.key === 'autre'; })[0];
-    var show = !!(a && a.checked);
-    autre.hidden = !show;
-    if (!show) autreTxt.value = '';
-    if (n) err('enjeux', false);
-  }
-  boxes.forEach(function (b) { b.addEventListener('change', refresh); });
-  refresh();
+  function filled() { return enjeux.filter(function (i) { return i.value.trim().length >= 2; }); }
+  enjeux.forEach(function (i) { i.addEventListener('input', function () { if (filled().length) err('enjeux', false); }); });
 
   function err(name, on) {
     var el = form.querySelector('[data-err="' + name + '"]');
     if (el) el.hidden = !on;
-    var input = form.querySelector('input[name="' + name + '"]');
-    if (input && input.type !== 'checkbox') {
+    var input = name === 'enjeux' ? enjeux[0] : form.querySelector('input[name="' + name + '"]');
+    if (input) {
       if (on) input.setAttribute('aria-invalid', 'true'); else input.removeAttribute('aria-invalid');
     }
   }
@@ -329,16 +263,20 @@
     var nom = form.nom, mail = form.courriel;
     var okNom = nom.value.trim().length >= 2;
     var okMail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim());
-    var okEnj = checked().length >= 1;
+    var okEnj = filled().length >= 1;
     err('nom', !okNom); err('courriel', !okMail); err('enjeux', !okEnj);
-    if (!okNom) nom.focus(); else if (!okMail) mail.focus(); else if (!okEnj) boxes[0].focus();
+    if (!okNom) nom.focus(); else if (!okMail) mail.focus(); else if (!okEnj) enjeux[0].focus();
     return okNom && okMail && okEnj;
   }
   ['nom', 'courriel'].forEach(function (n) { form[n].addEventListener('input', function () { err(n, false); }); });
 
   function params() {
     var p = new URLSearchParams();
-    new FormData(form).forEach(function (v, k) { if (k !== '_gotcha') p.append(k, String(v)); });
+    new FormData(form).forEach(function (v, k) {
+      if (k === '_gotcha') return;
+      if (k === 'enjeux' && !String(v).trim()) return; // champs facultatifs vides
+      p.append(k, String(v));
+    });
     p.append('page', location.href);
     p.append('horodatage_client', new Date().toISOString());
     return p;
@@ -365,25 +303,12 @@
     return toSheet().catch(function (e) { console.error('[bouture] Google Sheets échoué, repli Formspree :', e); return toFormspree(); });
   }
 
-  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function personalize(keys) {
-    var list = document.getElementById('more-list'), wrap = document.getElementById('more'), seen = {}, html = '';
-    (keys || []).forEach(function (k) {
-      var s = SOL[k]; if (!s || seen[s.href]) return; seen[s.href] = true;
-      var box = boxes.filter(function (b) { return b.dataset.key === k; })[0];
-      var label = box ? box.nextElementSibling.textContent : '';
-      html += '<li><a href="' + s.href + '"><span><small>' + esc(label) + '</small><strong>' + esc(s.t) + '</strong></span>' +
-        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>';
-    });
-    if (html) { list.innerHTML = html; wrap.hidden = false; }
-  }
-  function unlock(keys, fresh) {
+  function unlock(fresh) {
     gate.classList.add('done');
     guide.classList.add('on');
     guide.setAttribute('aria-hidden', 'false');
     document.getElementById('ok').hidden = !fresh;
     document.getElementById('back').hidden = fresh;
-    personalize(keys);
     if (fresh) { window.scrollTo({ top: 0, behavior: 'smooth' }); }
   }
 
@@ -392,12 +317,11 @@
     err('send', false);
     if (!validate()) return;
     if (form._gotcha.value) return;
-    var keys = checked().map(function (b) { return b.dataset.key; });
     var label = btn.innerHTML;
     btn.disabled = true; btn.textContent = 'Envoi…';
     send().then(function () {
-      try { localStorage.setItem(KEY, JSON.stringify({ at: Date.now(), keys: keys })); } catch (e) {}
-      unlock(keys, true);
+      try { localStorage.setItem(KEY, JSON.stringify({ at: Date.now() })); } catch (e) {}
+      unlock(true);
     }).catch(function (e) {
       console.error('[bouture] envoi impossible :', e);
       err('send', true);
@@ -406,7 +330,7 @@
 
   try {
     var prev = JSON.parse(localStorage.getItem(KEY) || 'null');
-    if (prev && prev.keys) unlock(prev.keys, false);
+    if (prev && prev.at) unlock(false);
   } catch (e) {}
 })();
 </script>

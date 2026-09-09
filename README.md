@@ -1,8 +1,8 @@
 # Planter ma bouture — landing du flyer Ramo
 
 Page unique (`index.html`), hébergée sur GitHub Pages. Le code QR du flyer
-pointe vers cette page. Le visiteur donne son nom, son courriel et jusqu'à
-3 enjeux, puis le guide de plantation s'affiche.
+pointe vers cette page. Le visiteur donne son nom, son courriel et décrit jusqu'à
+3 enjeux (municipalité, matières résiduelles), puis le guide s'affiche.
 
 ## Recevoir les réponses dans un Google Sheet (10 min, une seule fois)
 
@@ -25,10 +25,10 @@ Tant que `SHEET_URL` est vide, les réponses partent vers le formulaire
 Formspree du site ramo.eco (même boîte que « Nous joindre »).
 
 Colonnes de la feuille : Date, Nom, Courriel, Enjeu 1, Enjeu 2, Enjeu 3,
-Autre (précision), Langue, Source, Page.
+Langue, Source, Page.
 
 ## Modifier le texte
 
-Tout est dans `index.html` : titres, questions, liste des enjeux (bloc
+Tout est dans `index.html` : titres, questions, question sur les enjeux (bloc
 `<fieldset>`), les six étapes (`<ol class="steps">`). Modifiez dans GitHub
 (crayon) puis *Commit changes*.
