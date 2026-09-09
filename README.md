@@ -4,6 +4,14 @@ Page unique (`index.html`), hébergée sur GitHub Pages. Le code QR du flyer
 pointe vers cette page. Le visiteur donne son nom, son courriel et décrit jusqu'à
 3 enjeux (municipalité, matières résiduelles), puis le guide s'affiche.
 
+## État actuel
+
+**Déjà branché** (9 septembre 2026) : les réponses arrivent dans la feuille
+Google Sheets partagée (compte marketing@ramea.co), onglet *Réponses*.
+Le script Apps Script s'appelle « Réponses flyer bouture » et se rouvre depuis
+la feuille via *Extensions › Apps Script*. Les étapes ci-dessous ne servent
+qu'à refaire l'installation sur une autre feuille.
+
 ## Recevoir les réponses dans un Google Sheet (10 min, une seule fois)
 
 1. Sur drive.google.com : **Nouveau › Google Sheets**. Nommez la feuille
