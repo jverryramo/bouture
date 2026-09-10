@@ -319,6 +319,22 @@
     var prev = JSON.parse(localStorage.getItem(KEY) || 'null');
     if (prev && prev.at) unlock(false);
   } catch (e) {}
+
+  /* Compteur de scans : un signal par appareil (première ouverture seulement),
+   * enregistré dans l'onglet « Visites » de la feuille. Aucun cookie tiers. */
+  (function countVisit() {
+    if (!/^https:\/\//.test(SHEET_URL)) return;
+    var VKEY = 'ramo-bouture-visite';
+    try { if (localStorage.getItem(VKEY)) return; } catch (e) {}
+    var p = new URLSearchParams();
+    p.append('type', 'visite');
+    p.append('langue', 'fr');
+    p.append('appareil', /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'mobile' : 'ordinateur');
+    p.append('page', location.href);
+    fetch(SHEET_URL, { method: 'POST', body: p, keepalive: true }).then(function () {
+      try { localStorage.setItem(VKEY, String(Date.now())); } catch (e) {}
+    }).catch(function () {});
+  })();
 })();
 </script>
 </body>
