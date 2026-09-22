@@ -78,7 +78,7 @@
   .label::before{content:'';position:absolute;left:0;top:50%;width:16px;height:1px;background:var(--accent)}
   h2.big{font-size:clamp(28px,5vw,42px);color:var(--white);line-height:1.1;letter-spacing:-.015em;margin:12px 0 14px}
   h2.big em{color:var(--accent);font-style:italic}
-  .intro{font-size:clamp(15px,1.3vw,17px);color:var(--muted);max-width:660px;margin-bottom:clamp(28px,4vw,44px)}
+  .intro{font-size:clamp(15px,1.3vw,17px);color:var(--muted);max-width:660px;margin-bottom:clamp(18px,3vw,28px)}
 
   ol.steps{list-style:none;display:grid;gap:14px}
   .step{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;background:var(--card);border:1px solid rgba(220,242,30,.12);border-radius:16px;padding:clamp(18px,3vw,26px)}
@@ -92,6 +92,7 @@
   .note p+p{margin-top:12px}
   .note strong{color:var(--white)}
   .note a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+  .note--avant{margin:0 0 clamp(20px,3vw,28px)}
   @media (max-width:540px){.step{grid-template-columns:38px 1fr;gap:12px}.num{width:38px;height:38px;font-size:17px}.step h3{margin-top:2px}}
 
 
@@ -193,6 +194,11 @@
       <span class="label">Guide de plantation</span>
       <h2 class="big">Planter votre <em>bouture de saule</em></h2>
       <p class="intro">C’est simple : quatre gestes, et la nature fait le reste.</p>
+
+      <aside class="note note--avant">
+        <h3>Avant de planter</h3>
+        <p>Plantez votre bouture <strong>d’ici la fin octobre</strong>. En attendant, gardez-la <strong>au réfrigérateur</strong>, dans son emballage ou un sac de plastique, pour qu’elle reste au frais et humide.</p>
+      </aside>
 
       <ol class="steps">
         <li class="step"><span class="num" aria-hidden="true">1</span><div><h3>Décompactez un peu le sol</h3><p>À l’endroit choisi, ameublissez la terre sur une quinzaine de centimètres.</p></div></li>
