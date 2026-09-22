@@ -81,10 +81,7 @@
   .intro{font-size:clamp(15px,1.3vw,17px);color:var(--muted);max-width:660px;margin-bottom:clamp(18px,3vw,28px)}
 
   ol.steps{list-style:none;display:grid;gap:14px}
-  .step{display:grid;grid-template-columns:48px 1fr 92px;gap:16px;align-items:start;background:var(--card);border:1px solid rgba(220,242,30,.12);border-radius:16px;padding:clamp(18px,3vw,26px)}
-  .ill{width:92px;height:92px;color:var(--white);flex-shrink:0;justify-self:end}
-  .ill .acc{color:var(--accent)}
-  .ill .soil{color:#c9a27a;opacity:.85}
+  .step{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;background:var(--card);border:1px solid rgba(220,242,30,.12);border-radius:16px;padding:clamp(18px,3vw,26px)}
   .num{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--accent);color:var(--bg);font-weight:700;font-size:21px}
   .step h3{font-size:clamp(18px,2vw,21px);color:var(--white);line-height:1.2;margin:6px 0 10px}
   .step p{font-size:15.5px;color:var(--muted)}
@@ -96,7 +93,7 @@
   .note strong{color:var(--white)}
   .note a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
   .note--avant{margin:0 0 clamp(20px,3vw,28px)}
-  @media (max-width:540px){.step{grid-template-columns:38px 1fr 68px;gap:12px}.num{width:38px;height:38px;font-size:17px}.step h3{margin-top:2px}.ill{width:68px;height:68px}}
+  @media (max-width:540px){.step{grid-template-columns:38px 1fr;gap:12px}.num{width:38px;height:38px;font-size:17px}.step h3{margin-top:2px}}
 
 
 
@@ -204,10 +201,10 @@
       </aside>
 
       <ol class="steps">
-        <li class="step"><span class="num" aria-hidden="true">1</span><div><h3>Décompactez un peu le sol</h3><p>À l’endroit choisi, ameublissez la terre sur une quinzaine de centimètres.</p></div><svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 66h84"/><path class="soil" d="M14 76c4-4 8-4 12 0M32 80c4-4 8-4 12 0M52 77c4-4 8-4 12 0M72 82c4-4 8-4 12 0M22 88c4-4 8-4 12 0M62 90c4-4 8-4 12 0"/><path d="M74 12 56 44"/><path d="M60 40l-8 14M66 44l-4 12M54 38l-6 8" /><path class="acc" d="M70 10a4 4 0 0 1 6 3l-5 8"/><path d="M28 54l4-8M38 52l1-9M18 56l6-6"/></g></svg></li>
-        <li class="step"><span class="num" aria-hidden="true">2</span><div><h3>Dans le bon sens</h3><p>Les petits bourgeons pointent vers le haut.</p></div><svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M42 88V22l6-6"/><path class="acc" d="M42 66c-6-2-9-6-9-11 5 0 9 4 9 11zM42 50c6-2 9-6 9-11-5 0-9 4-9 11zM42 34c-6-2-9-6-9-11 5 0 9 4 9 11z" fill="currentColor" fill-opacity=".25"/><path d="M74 72V30M64 40l10-10 10 10"/></g></svg></li>
-        <li class="step"><span class="num" aria-hidden="true">3</span><div><h3>Enfoncez aux trois quarts</h3><p>Plantez la bouture à la verticale, en laissant environ le quart de sa longueur hors du sol. Tassez la terre autour.</p></div><svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38h84"/><path class="soil" d="M14 52c4-4 8-4 12 0M60 56c4-4 8-4 12 0M26 72c4-4 8-4 12 0M66 80c4-4 8-4 12 0M14 88c4-4 8-4 12 0M76 66c4-4 8-4 12 0"/><path d="M46 90V20l5-5"/><path class="acc" d="M46 30c-5-2-8-5-8-10 5 0 8 4 8 10z" fill="currentColor" fill-opacity=".25"/><path class="acc" d="M76 38v52M72 38h8M72 90h8"/></g><text class="acc" x="86" y="70" font-size="15" font-weight="700" fill="currentColor" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">¾</text></svg></li>
-        <li class="step"><span class="num" aria-hidden="true">4</span><div><h3>Compost et paillis <span class="opt">(facultatif)</span></h3><p>Si vous en avez, ajoutez un peu de compost au pied, puis une couche de paillis.</p></div><svg class="ill" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 68h84"/><path d="M50 60V16l5-5"/><path class="acc" d="M50 28c-5-2-8-5-8-10 5 0 8 4 8 10z" fill="currentColor" fill-opacity=".25"/><path class="acc" d="M18 68c8-10 18-14 32-14s24 4 32 14"/><path class="soil" d="M28 62c3-2 6-2 9 0M44 58c3-2 6-2 9 0M60 60c3-2 6-2 9 0M36 54c3-2 6-2 9 0M56 53c3-2 6-2 9 0"/><circle cx="26" cy="80" r="1.6" fill="currentColor"/><circle cx="40" cy="86" r="1.6" fill="currentColor"/><circle cx="58" cy="82" r="1.6" fill="currentColor"/><circle cx="74" cy="88" r="1.6" fill="currentColor"/><circle cx="66" cy="76" r="1.6" fill="currentColor"/><circle cx="34" cy="76" r="1.6" fill="currentColor"/></g></svg></li>
+        <li class="step"><span class="num" aria-hidden="true">1</span><div><h3>Décompactez un peu le sol</h3><p>À l’endroit choisi, ameublissez la terre sur une quinzaine de centimètres.</p></div></li>
+        <li class="step"><span class="num" aria-hidden="true">2</span><div><h3>Dans le bon sens</h3><p>Les petits bourgeons pointent vers le haut.</p></div></li>
+        <li class="step"><span class="num" aria-hidden="true">3</span><div><h3>Enfoncez aux trois quarts</h3><p>Plantez la bouture à la verticale, en laissant environ le quart de sa longueur hors du sol. Tassez la terre autour.</p></div></li>
+        <li class="step"><span class="num" aria-hidden="true">4</span><div><h3>Compost et paillis <span class="opt">(facultatif)</span></h3><p>Si vous en avez, ajoutez un peu de compost au pied, puis une couche de paillis.</p></div></li>
       </ol>
 
       <aside class="note">
